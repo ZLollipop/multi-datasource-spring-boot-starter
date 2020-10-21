@@ -1,2 +1,2 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-top.zhaohaoren.multi.datasource.spring.boot.autoconfigure.MultiDataSourceAutoConfiguration
+work.lollipops.multi.datasource.spring.boot.autoconfigure.MultiDataSourceAutoConfiguration

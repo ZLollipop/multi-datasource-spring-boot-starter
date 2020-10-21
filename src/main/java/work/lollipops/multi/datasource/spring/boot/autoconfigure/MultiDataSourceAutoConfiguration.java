@@ -1,4 +1,4 @@
-package top.zhaohaoren.multi.datasource.spring.boot.autoconfigure;
+package work.lollipops.multi.datasource.spring.boot.autoconfigure;
 
 import org.springframework.context.annotation.Configuration;
 
