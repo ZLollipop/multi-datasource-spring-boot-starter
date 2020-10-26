@@ -2,9 +2,7 @@ package work.lollipops.multi.datasource.spring.boot.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.core.Ordered;
 import work.lollipops.multi.datasource.spring.boot.autoconfigure.druid.DruidConfig;
 import work.lollipops.multi.datasource.spring.boot.autoconfigure.hikari.HikariCpConfig;
 
@@ -17,12 +15,10 @@ import java.util.Map;
  */
 
 @Data
-@EnableConfigurationProperties(MultiDataSourceProperties.class)
 @ConfigurationProperties(prefix = MultiDataSourceProperties.PREFIX)
 public class MultiDataSourceProperties {
 
     public static final String PREFIX = "spring.datasource.multi";
-//    public static final String HEALTH = PREFIX + ".health";
 
     /**
      * 必须设置默认的库,默认master
@@ -37,30 +33,6 @@ public class MultiDataSourceProperties {
      */
     private Boolean strict = false;
     /**
-     * 是否使用p6spy输出，默认不输出
-     */
-    private Boolean p6spy = false;
-    /**
-     * 是否使用开启seata，默认不开启
-     */
-    private Boolean seata = false;
-//    /**
-//     * seata使用模式，默认AT
-//     */
-//    private SeataMode seataMode = SeataMode.AT;
-    /**
-     * 是否使用 spring actuator 监控检查，默认不检查
-     */
-    private boolean health = false;
-//    /**
-//     * 多数据源选择算法clazz，默认负载均衡算法
-//     */
-//    private Class<? extends DynamicDataSourceStrategy> strategy = LoadBalanceDynamicDataSourceStrategy.class;
-    /**
-     * aop切面顺序，默认优先级最高
-     */
-    private Integer order = Ordered.HIGHEST_PRECEDENCE;
-    /**
      * Druid全局参数配置
      */
     @NestedConfigurationProperty
@@ -70,13 +42,4 @@ public class MultiDataSourceProperties {
      */
     @NestedConfigurationProperty
     private HikariCpConfig hikari = new HikariCpConfig();
-
-//    /**
-//     * 全局默认publicKey
-//     */
-//    private String publicKey = CryptoUtils.DEFAULT_PUBLIC_KEY_STRING;
-    /**
-     * aop 切面是否只允许切 public 方法
-     */
-    private boolean allowedPublicOnly = true;
 }
