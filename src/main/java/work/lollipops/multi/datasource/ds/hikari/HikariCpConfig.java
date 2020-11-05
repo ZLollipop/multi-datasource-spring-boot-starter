@@ -1,4 +1,4 @@
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.hikari;
+package work.lollipops.multi.datasource.ds.hikari;
 
 import com.zaxxer.hikari.HikariConfig;
 import lombok.Data;

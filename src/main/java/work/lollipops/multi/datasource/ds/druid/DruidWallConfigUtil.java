@@ -14,7 +14,7 @@
  * limitations under the License.
  * <pre/>
  */
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.druid;
+package work.lollipops.multi.datasource.ds.druid;
 
 import com.alibaba.druid.wall.WallConfig;
 import org.springframework.util.StringUtils;

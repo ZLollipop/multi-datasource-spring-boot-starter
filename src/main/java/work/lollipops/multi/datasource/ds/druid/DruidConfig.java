@@ -14,7 +14,7 @@
  * limitations under the License.
  * <pre/>
  */
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.druid;
+package work.lollipops.multi.datasource.ds.druid;
 
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Properties;
 
 import static com.alibaba.druid.pool.DruidAbstractDataSource.*;
-import static work.lollipops.multi.datasource.spring.boot.autoconfigure.druid.DruidConsts.*;
+import static work.lollipops.multi.datasource.ds.druid.DruidConsts.*;
 
 /**
  * Druid参数配置

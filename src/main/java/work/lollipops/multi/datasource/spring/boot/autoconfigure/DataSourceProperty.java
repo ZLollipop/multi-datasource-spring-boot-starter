@@ -21,12 +21,10 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
-import org.springframework.util.StringUtils;
-import work.lollipops.multi.datasource.spring.boot.autoconfigure.druid.DruidConfig;
-import work.lollipops.multi.datasource.spring.boot.autoconfigure.hikari.HikariCpConfig;
+import work.lollipops.multi.datasource.ds.druid.DruidConfig;
+import work.lollipops.multi.datasource.ds.hikari.HikariCpConfig;
 
 import javax.sql.DataSource;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 /**
@@ -98,6 +96,7 @@ public class DataSourceProperty {
     /**
      * Druid参数配置
      */
+
     @NestedConfigurationProperty
     private DruidConfig druid = new DruidConfig();
     /**
@@ -120,34 +119,4 @@ public class DataSourceProperty {
      * mapper接口的包名
      */
     private String basePackage;
-
-//
-//    public String getUrl() {
-//        return decrypt(url);
-//    }
-//
-//    public String getUsername() {
-//        return decrypt(username);
-//    }
-//
-//    public String getPassword() {
-//        return decrypt(password);
-//    }
-//
-//    /**
-//     * 字符串解密
-//     */
-//    private String decrypt(String cipherText) {
-//        if (StringUtils.hasText(cipherText)) {
-//            Matcher matcher = ENC_PATTERN.matcher(cipherText);
-//            if (matcher.find()) {
-//                try {
-//                    return CryptoUtils.decrypt(publicKey, matcher.group(1));
-//                } catch (Exception e) {
-//                    log.error("DynamicDataSourceProperties.decrypt error ", e);
-//                }
-//            }
-//        }
-//        return cipherText;
-//    }
 }

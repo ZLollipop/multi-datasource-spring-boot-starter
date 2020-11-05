@@ -2,11 +2,10 @@ package work.lollipops.multi.datasource.spring.boot.autoconfigure;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.boot.context.properties.NestedConfigurationProperty;
 import org.springframework.core.Ordered;
-import work.lollipops.multi.datasource.spring.boot.autoconfigure.druid.DruidConfig;
-import work.lollipops.multi.datasource.spring.boot.autoconfigure.hikari.HikariCpConfig;
+import work.lollipops.multi.datasource.ds.druid.DruidConfig;
+import work.lollipops.multi.datasource.ds.hikari.HikariCpConfig;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -17,7 +16,6 @@ import java.util.Map;
  */
 
 @Data
-@EnableConfigurationProperties(MultiDataSourceProperties.class)
 @ConfigurationProperties(prefix = MultiDataSourceProperties.PREFIX)
 public class MultiDataSourceProperties {
 

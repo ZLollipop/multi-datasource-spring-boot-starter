@@ -14,7 +14,7 @@
  * limitations under the License.
  * <pre/>
  */
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.druid;
+package work.lollipops.multi.datasource.ds.druid;
 
 import lombok.Data;
 

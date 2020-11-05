@@ -14,21 +14,31 @@
  * limitations under the License.
  * <pre/>
  */
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.druid;
-
-import lombok.Data;
+package work.lollipops.multi.datasource.support;
 
 /**
- * Druid监控配置
+ * 动态数据源常量
  *
- * @author TaoYu
+ * @author jobob
+ * @since 2019-10-08
  */
-@Data
-public class DruidStatConfig {
+public interface DdConstants {
 
-    private Long slowSqlMillis;
+    /**
+     * 数据源：主库
+     */
+    String MASTER = "master";
+    /**
+     * 数据源：从库
+     */
+    String SLAVE = "slave";
 
-    private Boolean logSlowSql;
-
-    private Boolean mergeSql;
+    /**
+     * DRUID数据源类
+     */
+    String DRUID_DATASOURCE = "com.alibaba.druid.pool.DruidDataSource";
+    /**
+     * HikariCp数据源
+     */
+    String HIKARI_DATASOURCE = "com.zaxxer.hikari.HikariDataSource";
 }

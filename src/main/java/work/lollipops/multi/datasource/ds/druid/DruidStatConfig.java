@@ -14,19 +14,21 @@
  * limitations under the License.
  * <pre/>
  */
-package work.lollipops.multi.datasource.spring.boot.autoconfigure.druid;
+package work.lollipops.multi.datasource.ds.druid;
 
 import lombok.Data;
 
 /**
- * Druid日志配置
+ * Druid监控配置
  *
- * @author Lhx
+ * @author TaoYu
  */
 @Data
-public class DruidSlf4jConfig {
+public class DruidStatConfig {
 
-    private Boolean enable = true;
+    private Long slowSqlMillis;
 
-    private Boolean statementExecutableSqlLogEnable = false;
+    private Boolean logSlowSql;
+
+    private Boolean mergeSql;
 }
